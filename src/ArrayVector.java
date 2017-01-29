@@ -1,8 +1,25 @@
 import java.util.*;
 
-public class ArrayVector implements List {
+public class ArrayVector extends AbstractList{
 
     List arrayVector;
+
+    public ArrayVector() {
+        this.arrayVector = new Vector();
+    }
+
+    public ArrayVector(Collection c){
+        this.arrayVector = new Vector();
+        this.arrayVector.addAll(c);
+    }
+
+    public ArrayVector(int capacity){
+        this.arrayVector = new Vector(capacity);
+    }
+
+    public ArrayVector(int capacity, int capacityIncrement){
+        this.arrayVector = new Vector(capacity, capacityIncrement);
+    }
 
     @Override
     public String toString() {
@@ -27,9 +44,7 @@ public class ArrayVector implements List {
         return arrayVector.hashCode();
     }
 
-    public ArrayVector() {
-        this.arrayVector = new Vector();
-    }
+
 
     @Override
     public int size() {
