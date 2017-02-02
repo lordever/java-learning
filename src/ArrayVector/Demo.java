@@ -61,7 +61,7 @@ public class Demo extends Vector {
 
         ArrayVector myNames = ArrayVector.unmodifiableArrayVector(names);
         System.out.println(myNames);
-        System.out.println(myNames.add("Alex")); //out exception
+//        System.out.println(myNames.add("Alex")); //out exception
     }
 
     private void initVariables() {

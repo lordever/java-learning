@@ -61,7 +61,7 @@ public class Demo {
 
         LinkedListVector myNames = LinkedListVector.unmodifiableArrayVector(names);
         System.out.println(myNames);
-        System.out.println(myNames.add("Alex")); //out exception
+//        System.out.println(myNames.add("Alex")); //out exception
     }
 
     private void initVariables() {
