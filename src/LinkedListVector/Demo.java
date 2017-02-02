@@ -1,9 +1,11 @@
 package LinkedListVector;
 
+import java.util.LinkedList;
+
 public class Demo {
-    LinkedListVector<String> linkedVectorString = new LinkedListVector();
-    LinkedListVector<Integer> linkedVectorNumber = new LinkedListVector();
-    LinkedListVector<Integer> linkedVectorInteger = new LinkedListVector();
+    private LinkedListVector<String> linkedVectorString = new LinkedListVector();
+    private LinkedListVector<Integer> linkedVectorNumber = new LinkedListVector();
+    private LinkedListVector<Integer> linkedVectorInteger = new LinkedListVector();
 
     public void start() {
         initVariables();
@@ -11,7 +13,7 @@ public class Demo {
         linkedQuest2();
         linkedQuest3();
         linkedQuest4();
-//        linkedQuest5();
+        linkedQuest5();
     }
 
     private void linkedQuest1() {
@@ -50,17 +52,17 @@ public class Demo {
         System.out.println(cloneVectorInteger.toString());
     }
 
-//    private void linkedQuest5() {
-//        System.out.println("\nQuest 5:");
-//        Vector<String> names = new Vector<String>();
-//        names.add("Marta");
-//        names.add("Derek");
-//        names.add("Dilan");
-//
-//        ArrayVector myNames = ArrayVector.unmodifiableArrayVector(names);
-//        System.out.println(myNames);
-//        System.out.println(myNames.add("Alex")); //out exception
-//    }
+    private void linkedQuest5() {
+        System.out.println("\nQuest 5:");
+        LinkedList<String> names = new LinkedList<String>();
+        names.add("Marta");
+        names.add("Derek");
+        names.add("Dilan");
+
+        LinkedListVector myNames = LinkedListVector.unmodifiableArrayVector(names);
+        System.out.println(myNames);
+        System.out.println(myNames.add("Alex")); //out exception
+    }
 
     private void initVariables() {
         initArrayVectorString();
@@ -82,7 +84,7 @@ public class Demo {
 
     private void initLinkedVectorInteger() {
         for (int i = 1; i < 4; i++) {
-            linkedVectorNumber.add(i);
+            linkedVectorInteger.add(i);
         }
     }
 
